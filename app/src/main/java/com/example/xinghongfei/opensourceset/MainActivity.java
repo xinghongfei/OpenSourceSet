@@ -1,13 +1,17 @@
 package com.example.xinghongfei.opensourceset;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewConfiguration;
+import android.widget.Toast;
 
 import com.example.xinghongfei.opensourceset.main.AnimFragment;
 import com.example.xinghongfei.opensourceset.main.BottomView;
@@ -35,6 +39,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @InjectView(R.id.mainactivity_other)
     BottomView mainactivityOther;
 
+    @InjectView(R.id.ac_toolbar_toolbar)
+    Toolbar acToolbarToolbar;
+
     List<BottomView> bottomViews = new ArrayList<BottomView>();
 
     List<Fragment> fragmentList = new ArrayList<Fragment>();
@@ -52,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         ButterKnife.inject(this);
 
-        setMyPictureInActionBar();
+//        setSupportActionBar(acToolbarToolbar);
 
         initial();
 
@@ -60,6 +67,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initial() {
+
         mainactivityView.setSomethingAlpha(1.0f);
 
         mainactivityAnimation.setOnClickListener(this);
@@ -99,6 +107,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         setLisenerToViewPager();
+
+
+        setToolbar();
+
+
+    }
+
+    private void setToolbar() {
+
+        // 设置主标题及其颜色
+        acToolbarToolbar.setTitle(R.string.main_toolbar);
+        acToolbarToolbar.setTitleTextColor(Color.WHITE);
+
+        acToolbarToolbar.inflateMenu(R.menu.menu);
+        acToolbarToolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                switch(item.getItemId()){
+                    case R.id.aboutme:
+                        // TODO: 16/7/21 go to AboutmeActivity
+                        Toast.makeText(MainActivity.this,"about me ",Toast.LENGTH_LONG).show();
+                        break;
+                }
+
+                return false;
+            }
+        });
 
     }
 
@@ -176,32 +211,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-
-        getMenuInflater().inflate(R.menu.menu, menu);
-
-        return true;
-    }
-
-
-
-    public void setMyPictureInActionBar() {
-
-        ViewConfiguration configuration = ViewConfiguration.get(this);
-
-        try {
-            Field menuKey = ViewConfiguration.class.getDeclaredField("sHasPermanentMenuKey");
-            menuKey.setAccessible(true);
-            menuKey.setBoolean(configuration, false);
-
-
-        } catch (NoSuchFieldException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        }
-
-
-    }
 }

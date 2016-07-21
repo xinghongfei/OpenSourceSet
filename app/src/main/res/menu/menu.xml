@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/item3"
-        android:showAsAction="ifRoom"
+        android:id="@+id/aboutme"
         android:icon="@drawable/about"
-        android:title="@string/app_name" />
+        android:orderInCategory="60"
+        android:title="复制"
+        app:showAsAction="ifRoom" />
 
 </menu>
