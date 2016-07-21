@@ -12,7 +12,7 @@ import com.example.xinghongfei.opensourceset.R;
 /**
  * Created by xinghongfei on 16/7/18.
  */
-public class ButtonFragment extends Fragment{
+public class Button1Fragment extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

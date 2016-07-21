@@ -26,7 +26,7 @@ public class ButtonActivity extends AppCompatActivity {
 
     ArrayList<String> tabs=new ArrayList<>();
 
-    ButtonFragment buttonFragment;
+    Button1Fragment buttonFragment;
     Button2Fragment button2Fragment;
 
 
@@ -52,7 +52,7 @@ public class ButtonActivity extends AppCompatActivity {
 
     private void initialFragmentAndTab() {
 
-        buttonFragment = new ButtonFragment();
+        buttonFragment = new Button1Fragment();
         fragments.add(buttonFragment);
         tabs.add("Button");
 
@@ -92,7 +92,5 @@ public class ButtonActivity extends AppCompatActivity {
         viewButtonTablayou.setupWithViewPager(viewButtonViewpager);
 
 
-//        viewButtonTablayou.addTab(viewButtonTablayou.newTab().setText("tton1"));
-//        viewButtonTablayou.addTab(viewButtonTablayou.newTab().setText("Button2"));
     }
 }
