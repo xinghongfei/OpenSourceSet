@@ -1,5 +1,6 @@
 package com.example.xinghongfei.opensourceset.main;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -26,6 +27,8 @@ import butterknife.InjectView;
  * Created by xinghongfei on 16/7/18.
  */
 public class ViewFragment extends Fragment {
+    public static final String PACAKGE="com.example.xinghongfei.opensourceset";
+
     @InjectView(R.id.view_recyclerview)
     RecyclerView viewRecyclerview;
 
@@ -55,7 +58,11 @@ public class ViewFragment extends Fragment {
             public void onClickItem(View view, ViewDateBean date) {
 
 
-                Toast.makeText(getContext(),date.getTitle(),Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent();
+                intent.setClassName(PACAKGE,date.getClassname());
+
+                getActivity().startActivity(intent);
+//                Toast.makeText(getContext(),date.getTitle(),Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -78,8 +85,8 @@ public class ViewFragment extends Fragment {
         if (list==null){
             list=new ArrayList<ViewDateBean>();
 
-            ViewDateBean view1= new ViewDateBean("aaaa",1,"111");
-            list.add(view1);
+            ViewDateBean buttonBean= new ViewDateBean("Button",1,"com.example.xinghongfei.opensourceset.view.button.ButtonActivity");
+            list.add(buttonBean);
 
 
         }

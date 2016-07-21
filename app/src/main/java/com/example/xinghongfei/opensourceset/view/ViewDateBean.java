@@ -23,6 +23,7 @@ public class ViewDateBean {
         this.title = title;
         this.count = count;
         this.classname = classname;
+        describe="";
     }
 
     public String getTitle() {

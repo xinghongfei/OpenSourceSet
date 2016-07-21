@@ -3,6 +3,9 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="textcolor">#01ae13</color>
+    <color name="textcolor">#01ff01</color>
+    <color name="backgrad">#e1e1e1</color>
+    <color name="tabcolor">#f1fff4</color>
+
 
 </resources>
