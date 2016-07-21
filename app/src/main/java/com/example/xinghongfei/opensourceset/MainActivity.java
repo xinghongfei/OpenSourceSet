@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // 设置主标题及其颜色
         acToolbarToolbar.setTitle(R.string.main_toolbar);
-        acToolbarToolbar.setTitleTextColor(Color.WHITE);
+        acToolbarToolbar.setTitleTextColor(Color.BLUE);
 
         acToolbarToolbar.inflateMenu(R.menu.menu);
         acToolbarToolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
