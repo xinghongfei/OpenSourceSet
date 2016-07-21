@@ -8,7 +8,6 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.system.StructStatVfs;
 
 import com.example.xinghongfei.opensourceset.R;
 
@@ -23,7 +22,9 @@ import butterknife.InjectView;
 public class ButtonActivity extends AppCompatActivity {
 
 
-    ArrayList<Fragment> fragments = new ArrayList<Fragment>();
+    ArrayList<Fragment> fragments = new ArrayList<>();
+
+    ArrayList<String> tabs=new ArrayList<>();
 
     ButtonFragment buttonFragment;
     Button2Fragment button2Fragment;
@@ -45,7 +46,6 @@ public class ButtonActivity extends AppCompatActivity {
 
         initialFragmentAndTab();
 
-
         initial();
 
     }
@@ -54,14 +54,14 @@ public class ButtonActivity extends AppCompatActivity {
 
         buttonFragment = new ButtonFragment();
         fragments.add(buttonFragment);
+        tabs.add("Button");
 
 
-        button2Fragment =new Button2Fragment();
+        button2Fragment = new Button2Fragment();
         fragments.add(button2Fragment);
+        tabs.add("Button1");
 
 
-        viewButtonTablayou.addTab(viewButtonTablayou.newTab().setText("tton1"));
-        viewButtonTablayou.addTab(viewButtonTablayou.newTab().setText("Button2"));
 
     }
 
@@ -78,6 +78,11 @@ public class ButtonActivity extends AppCompatActivity {
             public int getCount() {
                 return fragments.size();
             }
+
+            @Override
+            public CharSequence getPageTitle(int position) {
+                return tabs.get(position);
+            }
         };
 
 
@@ -85,5 +90,9 @@ public class ButtonActivity extends AppCompatActivity {
 
 
         viewButtonTablayou.setupWithViewPager(viewButtonViewpager);
+
+
+//        viewButtonTablayou.addTab(viewButtonTablayou.newTab().setText("tton1"));
+//        viewButtonTablayou.addTab(viewButtonTablayou.newTab().setText("Button2"));
     }
 }

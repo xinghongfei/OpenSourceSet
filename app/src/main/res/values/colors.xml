@@ -5,7 +5,10 @@
     <color name="colorAccent">#FF4081</color>
     <color name="textcolor">#01ff01</color>
     <color name="backgrad">#e1e1e1</color>
-    <color name="tabcolor">#f1fff4</color>
-
+    <color name="toolbar">#4c7bfc</color>
+    <color name="tabcolor">#4c7bfc</color>
+    <color name="tabIndicatorColor">#ffffff</color>
+    <color name="tabSelectedTextColor">#d7e2ff</color>
+    <color name="tabTextColor">#ffffff</color>
 
 </resources>

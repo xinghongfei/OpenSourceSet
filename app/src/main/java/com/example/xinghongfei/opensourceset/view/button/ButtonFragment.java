@@ -18,7 +18,7 @@ public class ButtonFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
 
-        View view=inflater.inflate(R.layout.anim_layout,null);
+        View view=inflater.inflate(R.layout.button1_layout,null);
 
         return view;
     }
