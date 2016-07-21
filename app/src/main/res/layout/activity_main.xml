@@ -1,17 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="com.example.xinghongfei.opensourceset.MainActivity">
 
-    <TextView
-        android:text="Hello World!"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-</RelativeLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mainactivity_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FFEAD1AE">
+
+    </android.support.v4.view.ViewPager>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.example.xinghongfei.opensourceset.main.BottomView
+            android:id="@+id/mainactivity_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            app:icon="@drawable/view"
+            app:text="View"
+            app:textColor="@color/textcolor"
+            app:textSize="15sp"
+
+
+            />
+
+        <com.example.xinghongfei.opensourceset.main.BottomView
+            android:id="@+id/mainactivity_animation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            app:icon="@drawable/animation"
+            app:text="Anim"
+            app:textColor="@color/textcolor"
+            app:textSize="15sp"
+
+            />
+
+        <com.example.xinghongfei.opensourceset.main.BottomView
+            android:id="@+id/mainactivity_tool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            app:icon="@drawable/tool"
+            app:text="Tool"
+            app:textColor="@color/textcolor"
+            app:textSize="15sp"
+
+            />
+
+
+        <com.example.xinghongfei.opensourceset.main.BottomView
+            android:id="@+id/mainactivity_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:paddingTop="3dp"
+            app:icon="@drawable/other"
+            app:text="Other"
+            app:textColor="@color/textcolor"
+            app:textSize="15dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
