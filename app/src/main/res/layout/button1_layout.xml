@@ -5,45 +5,67 @@
     android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center_horizontal">
+    android:orientation="vertical">
 
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
 
-
-        <com.like.LikeButton
-            android:id="@+id/star_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:icon_size="25dp"
-            app:icon_type="star" />
-
-        <com.like.LikeButton
-            android:id="@+id/thumb_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:icon_size="25dp"
-            app:icon_type="thumb" />
-
-
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="end">
+            android:layout_height="wrap_content">
 
-            <com.like.LikeButton
-                android:layout_alignParentRight="true"
-                android:id="@+id/like_button"
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:icon_size="25dp"
-                app:icon_type="heart" />
-        </LinearLayout>
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/paddingleft">
 
-    </LinearLayout>
+
+                <com.like.LikeButton
+                    android:id="@+id/star_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:icon_size="25dp"
+                    app:icon_type="star" />
+
+                <com.like.LikeButton
+                    android:id="@+id/thumb_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:icon_size="25dp"
+                    app:icon_type="thumb" />
+
+
+            </LinearLayout>
+
+
+
+                <com.like.LikeButton
+                    android:id="@+id/like_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    app:icon_size="25dp"
+                    app:icon_type="heart" />
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+    <include
+        layout="@layout/snackccainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom" />
+
+
 </LinearLayout>

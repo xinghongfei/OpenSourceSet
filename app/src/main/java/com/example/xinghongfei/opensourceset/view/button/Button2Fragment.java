@@ -30,14 +30,7 @@ public class Button2Fragment extends Fragment{
 
         likeButton= (LikeButton) view.findViewById(R.id.like_button);
 
-//        Snackbar.make(view, "Snackbar comes out", Snackbar.LENGTH_LONG)
-//                .setAction("Action", new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//
-//                    }
-//                }).show();
-//        show();
+
         return view;
     }
 
