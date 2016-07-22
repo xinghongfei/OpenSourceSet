@@ -1,4 +1,4 @@
-package com.example.xinghongfei.opensourceset.lib;
+package com.example.xinghongfei.mylibrary;
 
 
 import android.content.Context;
@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
 
-import com.example.xinghongfei.opensourceset.R;
 
 
 public class LoadingButton extends View{

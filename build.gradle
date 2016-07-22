@@ -16,7 +16,12 @@ allprojects {
     repositories {
         jcenter()
         mavenCentral()
+//  likebutton
         maven { url "https://jitpack.io" }
+//  SubmitButton
+        maven { url 'https://dl.bintray.com/spark/maven' }
+
+
     }
 }
 

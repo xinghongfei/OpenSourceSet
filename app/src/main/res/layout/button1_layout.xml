@@ -88,11 +88,12 @@
                 android:orientation="vertical"
                 android:paddingLeft="@dimen/paddingleft">
 
-                <com.example.xinghongfei.opensourceset.lib.LoadingButton
+                <com.example.xinghongfei.mylibrary.LoadingButton
                     android:layout_width="100dp"
                     android:layout_height="100dp" />
 
 
+                <!--todo 进度-->
                 <com.like.LikeButton
                     android:id="@+id/smooth_button"
                     android:layout_width="wrap_content"
