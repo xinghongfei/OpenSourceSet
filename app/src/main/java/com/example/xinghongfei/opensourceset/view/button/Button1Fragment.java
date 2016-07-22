@@ -1,17 +1,15 @@
 package com.example.xinghongfei.opensourceset.view.button;
 
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.design.widget.CoordinatorLayout;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ScrollView;
 
+import com.example.xinghongfei.mylibrary.ProgressGenerator;
+import com.example.xinghongfei.mylibrary.iml.ActionProcessButton;
 import com.example.xinghongfei.opensourceset.R;
 import com.example.xinghongfei.opensourceset.bean.InfoBean;
 import com.example.xinghongfei.opensourceset.date.CreateDate;
@@ -19,10 +17,7 @@ import com.example.xinghongfei.opensourceset.util.ShowSnack;
 import com.like.LikeButton;
 import com.like.OnLikeListener;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
-
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -31,19 +26,20 @@ import butterknife.InjectView;
 /**
  * Created by xinghongfei on 16/7/18.
  */
-public class Button1Fragment extends Fragment implements View.OnClickListener, OnLikeListener {
-
-   Handler handler=new Handler();
-
-    LikeButton thumbButton;
-    @InjectView(R.id.like_button)
-    LikeButton likeButton;
-    @InjectView(R.id.container)
-    CoordinatorLayout container;
-
+public class Button1Fragment extends Fragment implements View.OnClickListener, OnLikeListener, ProgressGenerator.OnCompleteListener {
 
 
     Map<Integer, InfoBean> button1Map;
+
+
+    @InjectView(R.id.like_button)
+    LikeButton likeButton;
+    @InjectView(R.id.android_process_button_s)
+    ActionProcessButton androidProcessButtonS;
+    @InjectView(R.id.container)
+    CoordinatorLayout container;
+    @InjectView(R.id.android_process_button_s2)
+    ActionProcessButton androidProcessButtonS2;
 
 
     @Nullable
@@ -59,7 +55,35 @@ public class Button1Fragment extends Fragment implements View.OnClickListener, O
         likeButton.setOnClickListener(this);
 
 
+        loading();
+
         return view;
+    }
+
+    private void loading() {
+
+
+        androidProcessButtonS.setMode(ActionProcessButton.Mode.PROGRESS);
+        final ProgressGenerator progressGenerator = new ProgressGenerator(this);
+        androidProcessButtonS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                progressGenerator.start(androidProcessButtonS);
+                androidProcessButtonS.setEnabled(false);
+
+            }
+        });
+        androidProcessButtonS2.setMode(ActionProcessButton.Mode.ENDLESS);
+        final ProgressGenerator progressGenerator2 = new ProgressGenerator(this);
+        androidProcessButtonS2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                progressGenerator2.start(androidProcessButtonS2);
+                androidProcessButtonS.setEnabled(false);
+
+            }
+        });
+
     }
 
     @Override
@@ -93,5 +117,12 @@ public class Button1Fragment extends Fragment implements View.OnClickListener, O
     @Override
     public void unLiked() {
 
+    }
+
+
+    @Override
+    public void onComplete() {
+//        androidProcessButtonS.setEnabled(true);
+//        androidProcessButtonS2.setEnabled(true);
     }
 }
