@@ -16,8 +16,21 @@ public class CreateDate {
 
         if (button1Map==null){
             button1Map=new HashMap<Integer,InfoBean>();
-            InfoBean infoBean1=new InfoBean("Like Button","www.baidu.com","good button","5");
+
+//          Likebutton
+            InfoBean infoBean1=new InfoBean("Like Button","https://github.com/jd-alexander/LikeButton","2种状态的动画按钮","4");
             button1Map.put(R.id.like_button,infoBean1);
+
+//            SubmitButton
+            InfoBean infoBean2=new InfoBean("SubmitButton","https://github.com/SparkYuan/SubmitButton","动画酷炫的提交按钮","4");
+            button1Map.put(R.id.like_button,infoBean2);
+
+
+
+
+
+
+
         }
 
 

@@ -10,7 +10,7 @@ import com.like.LikeButton;
  * Created by xinghongfei on 16/7/22.
  */
 public class ShowSnack {
-    public static final String NAME = "名称:";
+    public static final String NAME = "项目名称:";
     public static final String ADDRESS = "Github地址:";
     public static final String DES = "详情";
     public static final String INDEX = "推荐";
@@ -24,18 +24,22 @@ public class ShowSnack {
         if (isOver == false) {
             isOver=true;
             likeButton.setLiked(true);
-            Snackbar.make(view, NAME + infoBean.getName() + "\n"
-                            + ADDRESS + infoBean.getAddress() + "\n"
+            Snackbar.make(view, NAME + infoBean.getName()
+//                    + "\n"
+//                            + ADDRESS
+//                    + infoBean.getAddress() + "\n"
 //                +
 //                DES+infoBean.getDescribe()+"\n"+
 //                INDEX+infoBean.getRecommentIndex()
                     , Snackbar.LENGTH_LONG)
-                    .setAction("OK", new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
+                    .setAction("More", new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
 
-                        }
-                    }).setCallback(new Snackbar.Callback() {
+                    // TODO: 16/7/22 goto infoActivity
+
+                }
+            }).setCallback(new Snackbar.Callback() {
                 @Override
                 public void onDismissed(Snackbar snackbar, int event) {
                     super.onDismissed(snackbar, event);

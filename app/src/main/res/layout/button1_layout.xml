@@ -13,12 +13,12 @@
         android:layout_weight="1"
         android:orientation="vertical">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-
-            <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/one"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -26,26 +26,22 @@
 
 
                 <com.like.LikeButton
-                    android:id="@+id/star_button"
+                    android:id="@+id/one_like"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:icon_size="25dp"
                     app:icon_type="star" />
 
                 <com.like.LikeButton
-                    android:id="@+id/thumb_button"
+                    android:layout_below="@+id/one_like"
+                    android:id="@+id/two"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:icon_size="25dp"
                     app:icon_type="thumb" />
-
-
-            </LinearLayout>
-
-
-
                 <com.like.LikeButton
                     android:id="@+id/like_button"
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -53,11 +49,70 @@
                     app:icon_size="25dp"
                     app:icon_type="heart" />
 
+            </RelativeLayout>
 
-        </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/t"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/paddingleft">
+
+                <com.spark.submitbutton.SubmitButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Submit"
+                    android:textColor="@color/gray"
+                    app:sub_btn_background="@color/white"
+                    app:sub_btn_duration="3000"
+                    app:sub_btn_line_color="@color/green"
+                    app:sub_btn_ripple_color="@color/green1"
+                    app:sub_btn_tick_color="@color/sub_btn_ripple" />
+
+                <com.like.LikeButton
+                    android:id="@+id/submit_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    app:icon_size="25dp"
+                    app:icon_type="heart" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/f"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/paddingleft">
+
+                <com.example.xinghongfei.opensourceset.lib.LoadingButton
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" />
+
+
+                <com.like.LikeButton
+                    android:id="@+id/smooth_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    app:icon_size="25dp"
+                    app:icon_type="heart" />
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
 
 
     </ScrollView>
+
+
+
+
 
 
     <include

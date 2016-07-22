@@ -1,6 +1,7 @@
 package com.example.xinghongfei.opensourceset.view.button;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
@@ -22,6 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
@@ -29,12 +31,10 @@ import butterknife.InjectView;
 /**
  * Created by xinghongfei on 16/7/18.
  */
-public class Button1Fragment extends Fragment implements View.OnClickListener{
+public class Button1Fragment extends Fragment implements View.OnClickListener, OnLikeListener {
 
+   Handler handler=new Handler();
 
-    @InjectView(R.id.star_button)
-    LikeButton starButton;
-    @InjectView(R.id.thumb_button)
     LikeButton thumbButton;
     @InjectView(R.id.like_button)
     LikeButton likeButton;
@@ -57,6 +57,7 @@ public class Button1Fragment extends Fragment implements View.OnClickListener{
 
 
         likeButton.setOnClickListener(this);
+
 
         return view;
     }
@@ -84,5 +85,13 @@ public class Button1Fragment extends Fragment implements View.OnClickListener{
     }
 
 
+    @Override
+    public void liked() {
 
+    }
+
+    @Override
+    public void unLiked() {
+
+    }
 }
