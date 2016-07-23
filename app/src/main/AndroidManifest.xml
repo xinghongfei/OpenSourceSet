@@ -22,6 +22,8 @@
 
         <activity android:name=".main.DetailActivity"/>
 
+        <activity android:name=".view.refresh.RegreshActivity"/>
+
 
 
     </application>

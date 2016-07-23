@@ -7,12 +7,8 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.xinghongfei.opensourceset.R;
 import com.example.xinghongfei.opensourceset.main.adapter.ViewFragmentRecycleAdapter;
@@ -26,8 +22,8 @@ import butterknife.InjectView;
 /**
  * Created by xinghongfei on 16/7/18.
  */
-public class ViewFragment extends Fragment {
-    public static final String PACAKGE="com.example.xinghongfei.opensourceset";
+public class ViewFragment extends Fragment implements ViewFragmentRecycleAdapter.OnRecycleItemClickListener {
+    public static final String PACAKGE = "com.example.xinghongfei.opensourceset";
 
     @InjectView(R.id.view_recyclerview)
     RecyclerView viewRecyclerview;
@@ -47,28 +43,18 @@ public class ViewFragment extends Fragment {
 
         initialDate();
 
-        viewAdapter=new ViewFragmentRecycleAdapter(list,getContext());
+        viewAdapter = new ViewFragmentRecycleAdapter(list, getContext());
 
         viewRecyclerview.setLayoutManager(new LinearLayoutManager(getContext()));
 
         viewRecyclerview.setAdapter(viewAdapter);
 
-        viewAdapter.setOnRecycleItemClickListener(new ViewFragmentRecycleAdapter.OnRecycleItemClickListener() {
-            @Override
-            public void onClickItem(View view, ViewDateBean date) {
+
+        viewAdapter.setOnRecycleItemClickListener(this);
 
 
-                Intent intent=new Intent();
-                intent.setClassName(PACAKGE,date.getClassname());
-
-                getActivity().startActivity(intent);
-//                Toast.makeText(getContext(),date.getTitle(),Toast.LENGTH_SHORT).show();
-
-            }
-        });
         return view;
     }
-
 
 
     @Override
@@ -78,15 +64,16 @@ public class ViewFragment extends Fragment {
     }
 
 
-
-
     private void initialDate() {
 
-        if (list==null){
-            list=new ArrayList<ViewDateBean>();
+        if (list == null) {
+            list = new ArrayList<ViewDateBean>();
 
-            ViewDateBean buttonBean= new ViewDateBean("Button",6,"com.example.xinghongfei.opensourceset.view.button.ButtonActivity");
-            list.add(buttonBean);
+            ViewDateBean buttonBean1 = new ViewDateBean("Button", 6, "com.example.xinghongfei.opensourceset.view.button.ButtonActivity");
+            list.add(buttonBean1);
+
+            ViewDateBean buttonBean2 = new ViewDateBean("Refresh", 3, "com.example.xinghongfei.opensourceset.view.refresh.RegreshActivity");
+            list.add(buttonBean2);
 
 
         }
@@ -94,4 +81,10 @@ public class ViewFragment extends Fragment {
     }
 
 
+    @Override
+    public void onClickItem(View view, ViewDateBean date) {
+        Intent intent = new Intent();
+        intent.setClassName(PACAKGE, date.getClassname());
+        getActivity().startActivity(intent);
+    }
 }
