@@ -22,6 +22,8 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile project(':mylibrary')
+    compile project(':pulltorefreshlibrary')
+
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.0.0'
     compile 'com.jakewharton:butterknife:6.1.0'
@@ -34,5 +36,4 @@ dependencies {
     //submite button
     compile 'me.spark:submitbutton:1.0.0'
     compile 'com.github.rubensousa:FloatingToolbar:0.2'
-    compile project(':library')
 }

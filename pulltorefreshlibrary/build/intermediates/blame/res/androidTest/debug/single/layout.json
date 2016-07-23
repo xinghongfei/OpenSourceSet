@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/xinghongfei/Github/io/OpenSourceSet/library/build/intermediates/res/merged/androidTest/debug/layout/pull_to_refresh_header_horizontal.xml",
+        "source": "/Users/xinghongfei/Github/io/OpenSourceSet/library/build/intermediates/bundles/debug/res/layout/pull_to_refresh_header_horizontal.xml"
+    },
+    {
+        "merged": "/Users/xinghongfei/Github/io/OpenSourceSet/library/build/intermediates/res/merged/androidTest/debug/layout/pull_to_refresh_header_vertical.xml",
+        "source": "/Users/xinghongfei/Github/io/OpenSourceSet/library/build/intermediates/bundles/debug/res/layout/pull_to_refresh_header_vertical.xml"
+    },
+    {
+        "merged": "/Users/xinghongfei/Github/io/OpenSourceSet/pulltorefreshlibrary/build/intermediates/res/merged/androidTest/debug/layout/pull_to_refresh_header_horizontal.xml",
+        "source": "/Users/xinghongfei/Github/io/OpenSourceSet/pulltorefreshlibrary/build/intermediates/bundles/debug/res/layout/pull_to_refresh_header_horizontal.xml"
+    },
+    {
+        "merged": "/Users/xinghongfei/Github/io/OpenSourceSet/pulltorefreshlibrary/build/intermediates/res/merged/androidTest/debug/layout/pull_to_refresh_header_vertical.xml",
+        "source": "/Users/xinghongfei/Github/io/OpenSourceSet/pulltorefreshlibrary/build/intermediates/bundles/debug/res/layout/pull_to_refresh_header_vertical.xml"
+    }
+]

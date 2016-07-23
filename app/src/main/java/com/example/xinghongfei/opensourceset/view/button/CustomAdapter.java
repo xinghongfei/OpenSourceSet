@@ -24,6 +24,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
 
     public CustomAdapter(ClickListener listener) {
         mItems = new ArrayList<>();
+        mItems.add("google 官方,直接引入v4包即可");
         mListener = listener;
         for (int i = 'A'; i < 'z'; i++)
         {

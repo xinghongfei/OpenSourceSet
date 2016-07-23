@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/Users/xinghongfei/Github/io/OpenSourceSet/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/default_ptr_flip.png",
+        "source": "/Users/xinghongfei/Github/io/OpenSourceSet/library/build/intermediates/bundles/debug/res/drawable-hdpi-v4/default_ptr_flip.png"
+    },
+    {
+        "merged": "/Users/xinghongfei/Github/io/OpenSourceSet/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/default_ptr_rotate.png",
+        "source": "/Users/xinghongfei/Github/io/OpenSourceSet/library/build/intermediates/bundles/debug/res/drawable-hdpi-v4/default_ptr_rotate.png"
+    },
+    {
+        "merged": "/Users/xinghongfei/Github/io/OpenSourceSet/pulltorefreshlibrary/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/indicator_arrow.png",
+        "source": "/Users/xinghongfei/Github/io/OpenSourceSet/pulltorefreshlibrary/build/intermediates/bundles/debug/res/drawable-hdpi-v4/indicator_arrow.png"
+    },
+    {
+        "merged": "/Users/xinghongfei/Github/io/OpenSourceSet/pulltorefreshlibrary/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/default_ptr_flip.png",
+        "source": "/Users/xinghongfei/Github/io/OpenSourceSet/pulltorefreshlibrary/build/intermediates/bundles/debug/res/drawable-hdpi-v4/default_ptr_flip.png"
+    },
+    {
+        "merged": "/Users/xinghongfei/Github/io/OpenSourceSet/pulltorefreshlibrary/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/default_ptr_rotate.png",
+        "source": "/Users/xinghongfei/Github/io/OpenSourceSet/pulltorefreshlibrary/build/intermediates/bundles/debug/res/drawable-hdpi-v4/default_ptr_rotate.png"
+    },
+    {
+        "merged": "/Users/xinghongfei/Github/io/OpenSourceSet/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/indicator_arrow.png",
+        "source": "/Users/xinghongfei/Github/io/OpenSourceSet/library/build/intermediates/bundles/debug/res/drawable-hdpi-v4/indicator_arrow.png"
+    }
+]
