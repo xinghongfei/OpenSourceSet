@@ -21,12 +21,13 @@ import java.util.Map;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import butterknife.OnClick;
 
 
 /**
  * Created by xinghongfei on 16/7/18.
  */
-public class Button1Fragment extends Fragment implements View.OnClickListener, OnLikeListener, ProgressGenerator.OnCompleteListener {
+public class Button1Fragment extends Fragment implements OnLikeListener, ProgressGenerator.OnCompleteListener {
 
 
     Map<Integer, InfoBean> button1Map;
@@ -40,6 +41,14 @@ public class Button1Fragment extends Fragment implements View.OnClickListener, O
     CoordinatorLayout container;
     @InjectView(R.id.android_process_button_s2)
     ActionProcessButton androidProcessButtonS2;
+    @InjectView(R.id.submit_button)
+    LikeButton submitButton;
+    @InjectView(R.id.easyloadingbtn)
+    LikeButton easyloadingbtn;
+    @InjectView(R.id.smooth_button)
+    LikeButton smoothButton;
+    @InjectView(R.id.android_process_button)
+    LikeButton androidProcessButton;
 
 
     @Nullable
@@ -50,9 +59,6 @@ public class Button1Fragment extends Fragment implements View.OnClickListener, O
         View view = inflater.inflate(R.layout.button1_layout, null);
         ButterKnife.inject(this, view);
         button1Map = CreateDate.button1(button1Map);
-
-
-        likeButton.setOnClickListener(this);
 
 
         loading();
@@ -92,22 +98,6 @@ public class Button1Fragment extends Fragment implements View.OnClickListener, O
         ButterKnife.reset(this);
     }
 
-    @Override
-    public void onClick(View view) {
-
-        switch (view.getId()) {
-            case R.id.like_button:
-                InfoBean infoBean1 = button1Map.get(R.id.like_button);
-                ShowSnack.show(infoBean1, container, likeButton);
-
-                break;
-
-
-        }
-
-
-    }
-
 
     @Override
     public void liked() {
@@ -124,5 +114,31 @@ public class Button1Fragment extends Fragment implements View.OnClickListener, O
     public void onComplete() {
 //        androidProcessButtonS.setEnabled(true);
 //        androidProcessButtonS2.setEnabled(true);
+    }
+
+    @OnClick({R.id.like_button,R.id.submit_button, R.id.easyloadingbtn, R.id.smooth_button, R.id.android_process_button})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.like_button:
+                InfoBean infoBean1 = button1Map.get(R.id.like_button);
+                ShowSnack.show(infoBean1, container, (LikeButton) view);
+                break;
+            case R.id.submit_button:
+                InfoBean infoBean2 = button1Map.get(R.id.smooth_button);
+                ShowSnack.show(infoBean2, container, (LikeButton) view);
+                break;
+            case R.id.easyloadingbtn:
+                InfoBean infoBean3 = button1Map.get(R.id.easyloadingbtn);
+                ShowSnack.show(infoBean3, container, (LikeButton) view);
+                break;
+            case R.id.smooth_button:
+                InfoBean infoBean4 = button1Map.get(R.id.smooth_button);
+                ShowSnack.show(infoBean4, container, (LikeButton) view);
+                break;
+            case R.id.android_process_button:
+                InfoBean infoBean5 = button1Map.get(R.id.android_process_button);
+                ShowSnack.show(infoBean5, container, (LikeButton) view);
+                break;
+        }
     }
 }

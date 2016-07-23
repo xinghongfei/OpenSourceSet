@@ -20,6 +20,10 @@
 
         <activity android:name=".view.button.ButtonActivity"/>
 
+        <activity android:name=".main.DetailActivity"/>
+
+
+
     </application>
 
 </manifest>

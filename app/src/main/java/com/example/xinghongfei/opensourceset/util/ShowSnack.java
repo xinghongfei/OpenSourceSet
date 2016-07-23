@@ -1,9 +1,13 @@
 package com.example.xinghongfei.opensourceset.util;
 
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.view.View;
 
 import com.example.xinghongfei.opensourceset.bean.InfoBean;
+import com.example.xinghongfei.opensourceset.main.DetailActivity;
 import com.like.LikeButton;
 
 /**
@@ -18,25 +22,23 @@ public class ShowSnack {
     static Boolean isOver = false;
 
 
-    public static void show(final InfoBean infoBean, View view, final LikeButton likeButton) {
+    public static void show(final InfoBean infoBean, final View view, final LikeButton likeButton) {
 
 
         if (isOver == false) {
             isOver=true;
             likeButton.setLiked(true);
             Snackbar.make(view, NAME + infoBean.getName()
-//                    + "\n"
-//                            + ADDRESS
-//                    + infoBean.getAddress() + "\n"
-//                +
-//                DES+infoBean.getDescribe()+"\n"+
-//                INDEX+infoBean.getRecommentIndex()
                     , Snackbar.LENGTH_LONG)
                     .setAction("More", new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-                    // TODO: 16/7/22 goto infoActivity
+                    Context context=view.getContext();
+                    Intent intent =new Intent(context, DetailActivity.class);
+                    Bundle bundle=new Bundle();
+                    bundle.putParcelable(DetailActivity.INFO,infoBean);
+                    intent.putExtra(DetailActivity.INFO,bundle);
+                    DetailActivity.show(context,intent);
 
                 }
             }).setCallback(new Snackbar.Callback() {

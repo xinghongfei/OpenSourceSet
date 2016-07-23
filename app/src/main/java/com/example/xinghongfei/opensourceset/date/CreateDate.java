@@ -23,19 +23,21 @@ public class CreateDate {
 
 //            SubmitButton
             InfoBean infoBean2=new InfoBean("SubmitButton","https://github.com/SparkYuan/SubmitButton","动画酷炫的提交按钮","4");
-            button1Map.put(R.id.like_button,infoBean2);
+            button1Map.put(R.id.submit_button,infoBean2);
 
+//            easyloadingbtn
+            InfoBean infoBean3=new InfoBean("easyloadingbtn","https://github.com/DevinShine/easyloadingbtn","根据dribbble上的一个gif图片实现的Material Design加载按钮,加载进度有BUG","4.5");
+            button1Map.put(R.id.easyloadingbtn,infoBean3);
 
+//            SmoothCheckBox
+            InfoBean infoBean5=new InfoBean("SmoothCheckBox","https://github.com/andyxialm/SmoothCheckBox","仿Twitter喜欢动画的按钮","4.5");
+            button1Map.put(R.id.smooth_button,infoBean5);
 
-
-
-
+//            android_process_button
+            InfoBean infoBean4=new InfoBean("android_process_button","https://github.com/dmytrodanylyk/android-process-button","能显示加载状态的button控件。","4.6");
+            button1Map.put(R.id.android_process_button,infoBean4);
 
         }
-
-
-
-
 
         return button1Map;
     };
