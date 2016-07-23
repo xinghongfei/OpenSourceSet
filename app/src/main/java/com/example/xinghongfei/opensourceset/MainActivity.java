@@ -118,7 +118,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
         // 设置主标题及其颜色
         acToolbarToolbar.setTitle(R.string.main_toolbar);
-        acToolbarToolbar.setTitleTextColor(Color.BLUE);
+        acToolbarToolbar.setTitleTextColor(Color.WHITE);
 
         acToolbarToolbar.inflateMenu(R.menu.menu);
         acToolbarToolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {

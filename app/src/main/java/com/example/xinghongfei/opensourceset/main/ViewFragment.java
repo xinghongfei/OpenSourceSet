@@ -85,7 +85,7 @@ public class ViewFragment extends Fragment {
         if (list==null){
             list=new ArrayList<ViewDateBean>();
 
-            ViewDateBean buttonBean= new ViewDateBean("Button",1,"com.example.xinghongfei.opensourceset.view.button.ButtonActivity");
+            ViewDateBean buttonBean= new ViewDateBean("Button",6,"com.example.xinghongfei.opensourceset.view.button.ButtonActivity");
             list.add(buttonBean);
 
 

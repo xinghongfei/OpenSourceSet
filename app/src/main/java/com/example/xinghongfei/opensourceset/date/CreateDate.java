@@ -1,5 +1,7 @@
 package com.example.xinghongfei.opensourceset.date;
 
+import android.util.ArrayMap;
+
 import com.example.xinghongfei.opensourceset.R;
 import com.example.xinghongfei.opensourceset.bean.InfoBean;
 
@@ -15,7 +17,7 @@ public class CreateDate {
     public static Map<Integer,InfoBean> button1(Map<Integer,InfoBean> button1Map){
 
         if (button1Map==null){
-            button1Map=new HashMap<Integer,InfoBean>();
+            button1Map=new ArrayMap<>();
 
 //          Likebutton
             InfoBean infoBean1=new InfoBean("Like Button","https://github.com/jd-alexander/LikeButton","2种状态的动画按钮","4");
@@ -30,17 +32,30 @@ public class CreateDate {
             button1Map.put(R.id.easyloadingbtn,infoBean3);
 
 //            SmoothCheckBox
-            InfoBean infoBean5=new InfoBean("SmoothCheckBox","https://github.com/andyxialm/SmoothCheckBox","仿Twitter喜欢动画的按钮","4.5");
-            button1Map.put(R.id.smooth_button,infoBean5);
+            InfoBean infoBean4=new InfoBean("SmoothCheckBox","https://github.com/andyxialm/SmoothCheckBox","仿Twitter喜欢动画的按钮","4.5");
+            button1Map.put(R.id.smooth_button,infoBean4);
 
 //            android_process_button
-            InfoBean infoBean4=new InfoBean("android_process_button","https://github.com/dmytrodanylyk/android-process-button","能显示加载状态的button控件。","4.6");
-            button1Map.put(R.id.android_process_button,infoBean4);
+            InfoBean infoBean5=new InfoBean("android_process_button","https://github.com/dmytrodanylyk/android-process-button","能显示加载状态的button控件。","4.6");
+            button1Map.put(R.id.android_process_button,infoBean5);
 
         }
 
         return button1Map;
     };
 
+    public static Map<Integer,InfoBean> button2(Map<Integer,InfoBean> button2Map){
+
+        if (button2Map==null){
+            button2Map=new ArrayMap<>();
+            InfoBean infoBean1=new InfoBean("FloatingToolbar",
+                    " https://github.com/rubensousa/FloatingToolbar","一个从FloatingActionButton演变的toolbar","4.3");
+            button2Map.put(R.id.floatingToolbar_button,infoBean1);
+
+        }
+
+        return button2Map;
+
+    }
 
 }

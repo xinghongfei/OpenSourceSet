@@ -53,7 +53,10 @@
                     app:icon_type="heart" />
 
             </RelativeLayout>
-
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="2dp"
+               android:background="@color/divider"></LinearLayout>
 
             <RelativeLayout
                 android:id="@+id/t"
@@ -83,7 +86,10 @@
                     app:icon_size="25dp"
                     app:icon_type="heart" />
             </RelativeLayout>
-
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/divider"></LinearLayout>
             <RelativeLayout
                 android:id="@+id/f"
                 android:layout_width="match_parent"
@@ -108,7 +114,10 @@
                     app:icon_size="25dp"
                     app:icon_type="heart" />
             </RelativeLayout>
-
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/divider"></LinearLayout>
             <RelativeLayout
                 android:id="@+id/smoothcheckbtn_parent"
                 android:layout_width="match_parent"
@@ -148,8 +157,12 @@
                     app:icon_type="heart" />
             </RelativeLayout>
 
-
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/divider"></LinearLayout>
             <RelativeLayout
+                android:paddingTop="20dp"
                 android:id="@+id/android_process_button_parent"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"

@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 
 import com.example.xinghongfei.opensourceset.R;
 
@@ -54,12 +55,24 @@ public class ButtonActivity extends AppCompatActivity {
 
         buttonFragment = new Button1Fragment();
         fragments.add(buttonFragment);
-        tabs.add("Button");
+        tabs.add("Button1");
 
 
         button2Fragment = new Button2Fragment();
         fragments.add(button2Fragment);
-        tabs.add("Button1");
+        tabs.add("Button2");
+
+        acToolbarToolbar.setTitle("Button");
+        acToolbarToolbar.setTitleTextColor(getResources().getColor(R.color.white));
+
+        acToolbarToolbar.setNavigationIcon(R.drawable.goback);
+        acToolbarToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               finish();
+            }
+        });
+
 
 
 
