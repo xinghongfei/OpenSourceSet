@@ -24,6 +24,11 @@
     <color name="green1">#42ba5a</color>
     <color name="divider">#d2d2d2</color>
 
+    <color name="drawer_arrow_second_color">#303f9f</color>
+    <color name="actionbar_color">#bf360c</color>
+
+
+
 
 
 </resources>

@@ -72,8 +72,11 @@ public class ViewFragment extends Fragment implements ViewFragmentRecycleAdapter
             ViewDateBean buttonBean1 = new ViewDateBean("Button", 6, "com.example.xinghongfei.opensourceset.view.button.ButtonActivity");
             list.add(buttonBean1);
 
-            ViewDateBean buttonBean2 = new ViewDateBean("Refresh", 3, "com.example.xinghongfei.opensourceset.view.refresh.RegreshActivity");
+            ViewDateBean buttonBean2 = new ViewDateBean("Refresh", 2, "com.example.xinghongfei.opensourceset.view.refresh.RegreshActivity");
             list.add(buttonBean2);
+
+            ViewDateBean buttonBean3 = new ViewDateBean("Indicator", 1, "com.example.xinghongfei.opensourceset.view.indicator.IndicatorActivity");
+            list.add(buttonBean3);
 
 
         }

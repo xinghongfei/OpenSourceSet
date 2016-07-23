@@ -123,7 +123,10 @@ public class Refresh2Fragment extends Fragment {
             mAdapter.notifyDataSetChanged();
 
             // Call onRefreshComplete when the list has been refreshed.
-            mPullRefreshListView.onRefreshComplete();
+            if (mPullRefreshListView!=null){
+
+                mPullRefreshListView.onRefreshComplete();
+            }
 
             super.onPostExecute(result);
         }
