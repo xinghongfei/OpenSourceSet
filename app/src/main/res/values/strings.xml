@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">Open Source Set</string>
-    <string name="main_toolbar">Open Source Set</string>
+    <string name="main_toolbar">开源集合</string>
+    <string name="drawer_open">drawer_open</string>
+    <string name="drawer_close">drawer_close</string>
+    <string name="indicator"> 项目名称：LDrawer\n
+            github：https://github.com/ikimuhendis/LDrawer\n
+            描述   ：material design动画效果的Android drawer 指示图标\n
+            推荐指数：4.6</string>
 
 </resources>

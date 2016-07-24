@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/paddingleft">
+
+
+                <com.like.LikeButton
+                    android:id="@+id/one_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    app:icon_size="25dp"
+                    app:icon_type="star" />
+
+                <com.like.LikeButton
+                    android:id="@+id/two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/one_like"
+                    android:layout_centerHorizontal="true"
+                    app:icon_size="25dp"
+                    app:icon_type="thumb" />
+
+                <com.like.LikeButton
+                    android:id="@+id/like_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    app:icon_size="25dp"
+                    app:icon_type="heart" />
+
+            </RelativeLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="2dp"
+               android:background="@color/divider"></LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/t"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/paddingleft">
+
+                <com.spark.submitbutton.SubmitButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:text="Submit"
+                    android:textColor="@color/gray"
+                    app:sub_btn_background="@color/white"
+                    app:sub_btn_duration="3000"
+                    app:sub_btn_line_color="@color/green"
+                    app:sub_btn_ripple_color="@color/green1"
+                    app:sub_btn_tick_color="@color/sub_btn_ripple" />
+
+                <com.like.LikeButton
+                    android:id="@+id/submit_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    app:icon_size="25dp"
+                    app:icon_type="heart" />
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/divider"></LinearLayout>
+            <RelativeLayout
+                android:id="@+id/f"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/paddingleft">
+
+                <com.example.xinghongfei.mylibrary.LoadingButton
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/easyloadingbtns"
+                    android:layout_centerHorizontal="true" />
+
+
+                <!--todo 进度-->
+                <com.like.LikeButton
+                    android:id="@+id/easyloadingbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    app:icon_size="25dp"
+                    app:icon_type="heart" />
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/divider"></LinearLayout>
+            <RelativeLayout
+                android:id="@+id/smoothcheckbtn_parent"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/paddingleft">
+
+                <com.example.xinghongfei.mylibrary.SmoothCheckBox
+                    android:id="@+id/smooth_button1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true" />
+
+                <com.example.xinghongfei.mylibrary.SmoothCheckBox
+                    android:id="@+id/smooth_button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/smooth_button1"
+
+                    android:layout_centerHorizontal="true"
+                    app:color_checked="@color/yellow" />
+
+                <com.example.xinghongfei.mylibrary.SmoothCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/smooth_button2"
+                    android:layout_centerHorizontal="true"
+                    app:color_checked="@color/green" />
+
+                <com.like.LikeButton
+                    android:id="@+id/smooth_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    app:icon_size="25dp"
+                    app:icon_type="heart" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/divider"></LinearLayout>
+            <RelativeLayout
+                android:paddingTop="20dp"
+                android:id="@+id/android_process_button_parent"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/paddingleft">
+
+
+                <com.example.xinghongfei.mylibrary.iml.ActionProcessButton
+                    android:id="@+id/android_process_button_s"
+                    android:layout_width="200dp"
+                    android:layout_height="48dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="16dp"
+                    android:text="Sign_in"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    app:pb_colorComplete="@color/green_complete"
+                    app:pb_colorNormal="@color/blue_normal"
+                    app:pb_colorPressed="@color/blue_pressed"
+                    app:pb_colorProgress="@color/purple_progress"
+                    app:pb_textComplete="Success"
+                    app:pb_textProgress="Loading" />
+
+                <com.example.xinghongfei.mylibrary.iml.ActionProcessButton
+                    android:id="@+id/android_process_button_s2"
+                    android:layout_below="@+id/android_process_button_s"
+                    android:layout_width="200dp"
+                    android:layout_height="48dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="16dp"
+                    android:text="Sign_in"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    app:pb_colorComplete="@color/green_complete"
+                    app:pb_colorNormal="@color/blue_normal"
+                    app:pb_colorPressed="@color/blue_pressed"
+                    app:pb_colorProgress="@color/purple_progress"
+                    app:pb_textComplete="Success"
+                    app:pb_textProgress="Loading" />
+
+                <com.like.LikeButton
+                    android:id="@+id/android_process_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    app:icon_size="25dp"
+                    app:icon_type="heart" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+    <include
+        layout="@layout/snackccainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom" />
+
+
+</LinearLayout>

@@ -7,18 +7,14 @@
     android:orientation="vertical"
     tools:context="com.example.xinghongfei.opensourceset.MainActivity">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/ac_toolbar_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+   <include layout="@layout/toolbarall"/>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/mainactivity_viewpager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="#FFEAD1AE">
-
+        android:background="@color/backgrad">
     </android.support.v4.view.ViewPager>
 
 

@@ -3,6 +3,32 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="textcolor">#01ae13</color>
+    <color name="textcolor">#008e00</color>
+    <color name="backgrad">#e1e1e1</color>
+    <color name="toolbar">#4c7bfc</color>
+    <color name="tabcolor">#4c7bfc</color>
+    <color name="tabIndicatorColor">#ffffff</color>
+    <color name="tabSelectedTextColor">#d7e2ff</color>
+    <color name="tabTextColor">#ffffff</color>
+
+
+    <color name="sub_btn_background">#424a52</color>
+    <color name="sub_btn_line">#00c68c</color>
+    <color name="sub_btn_ripple">#eff0f2</color>
+    <color name="sub_btn_tick">#eff0f2</color>
+    <color name="white">#ffffff</color>
+    <color name="gray">#627676</color>
+    <color name="yellow">#f4fc00</color>
+    <color name="black">#000000</color>
+    <color name="green">#08d631</color>
+    <color name="green1">#42ba5a</color>
+    <color name="divider">#d2d2d2</color>
+
+    <color name="drawer_arrow_second_color">#303f9f</color>
+    <color name="actionbar_color">#bf360c</color>
+
+
+
+
 
 </resources>
